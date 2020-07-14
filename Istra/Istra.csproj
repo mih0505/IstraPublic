@@ -1,0 +1,644 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A73CAD45-817B-4938-BC20-18C728DF2039}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Istra</RootNamespace>
+    <AssemblyName>Istra</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>1</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.8.1.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.8.1\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus, Version=4.5.1.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.4.5.1\lib\net40\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.3\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.3\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Win32.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Win32.Primitives.4.3.0\lib\net46\Microsoft.Win32.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="PawnHunter.Numerals, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\PawnHunter.Numerals.1.0.0.0\lib\net40\PawnHunter.Numerals.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.AppContext, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.AppContext.4.3.0\lib\net46\System.AppContext.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Console, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Console.4.3.0\lib\net46\System.Console.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.3.0\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Globalization.Calendars, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Globalization.Calendars.4.3.0\lib\net46\System.Globalization.Calendars.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Compression.4.3.0\lib\net46\System.IO.Compression.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.IO.Compression.ZipFile, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Compression.ZipFile.4.3.0\lib\net46\System.IO.Compression.ZipFile.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.4.3.0\lib\net46\System.IO.FileSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.Primitives.4.3.0\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Packaging, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Packaging.4.4.0\lib\net46\System.IO.Packaging.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.4.3.0\lib\net46\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Sockets, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Sockets.4.3.0\lib\net46\System.Net.Sockets.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net461\System.Security.Cryptography.Algorithms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.ReaderWriter, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Xml.ReaderWriter.4.3.0\lib\net46\System.Xml.ReaderWriter.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="Xceed.Words.NET, Version=1.3.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocX.1.3.0\lib\net40\Xceed.Words.NET.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutForm.Designer.cs">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ArchiveForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ArchiveForm.Designer.cs">
+      <DependentUpon>ArchiveForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Documents\Documents.cs" />
+    <Compile Include="Documents\Protocols.cs" />
+    <Compile Include="AddingStudentToGroupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddingStudentToGroupForm.Designer.cs">
+      <DependentUpon>AddingStudentToGroupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AuthForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuthForm.Designer.cs">
+      <DependentUpon>AuthForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DiscountForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DiscountForm.Designer.cs">
+      <DependentUpon>DiscountForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Documents\Report.cs" />
+    <Compile Include="Entities\AccessGroups.cs" />
+    <Compile Include="Entities\Activity.cs" />
+    <Compile Include="Entities\AddingStudents.cs" />
+    <Compile Include="Entities\Archive.cs" />
+    <Compile Include="Entities\Base.cs" />
+    <Compile Include="Entities\Cause.cs" />
+    <Compile Include="Entities\City.cs" />
+    <Compile Include="Entities\Class.cs" />
+    <Compile Include="Entities\Course.cs" />
+    <Compile Include="Entities\Department.cs" />
+    <Compile Include="Entities\Direction.cs" />
+    <Compile Include="Entities\Document.cs" />
+    <Compile Include="Entities\Enrollment.cs" />
+    <Compile Include="Entities\Finance.cs" />
+    <Compile Include="Entities\FinanceGroups.cs" />
+    <Compile Include="Entities\Group.cs" />
+    <Compile Include="Entities\GroupsEnrollStudent.cs" />
+    <Compile Include="Entities\Housing.cs" />
+    <Compile Include="Entities\IstraContext.cs" />
+    <Compile Include="Entities\Lesson.cs" />
+    <Compile Include="Entities\ListGroupFull.cs" />
+    <Compile Include="Entities\ListGroups.cs" />
+    <Compile Include="Entities\ListGroupsWorker.cs" />
+    <Compile Include="Entities\ListLessons.cs" />
+    <Compile Include="Entities\ListPayments.cs" />
+    <Compile Include="Entities\ListPays.cs" />
+    <Compile Include="Entities\ListPeriods.cs" />
+    <Compile Include="Entities\ListRetentions.cs" />
+    <Compile Include="Entities\ListSchedules.cs" />
+    <Compile Include="Entities\ListSections.cs" />
+    <Compile Include="Entities\ListStudentFull.cs" />
+    <Compile Include="Entities\ListStudents.cs" />
+    <Compile Include="Entities\ListTransactions.cs" />
+    <Compile Include="Entities\ListWorkers.cs" />
+    <Compile Include="Entities\ListWorkersAndBalance.cs" />
+    <Compile Include="Entities\ManageRole.cs" />
+    <Compile Include="Entities\Month.cs" />
+    <Compile Include="Entities\Payment.cs" />
+    <Compile Include="Entities\Permission.cs" />
+    <Compile Include="Entities\Post.cs" />
+    <Compile Include="Entities\PrintContract.cs" />
+    <Compile Include="Entities\Privilege.cs" />
+    <Compile Include="Entities\Retention.cs" />
+    <Compile Include="Entities\Role.cs" />
+    <Compile Include="Entities\Schedule.cs" />
+    <Compile Include="Entities\School.cs" />
+    <Compile Include="Entities\Section.cs" />
+    <Compile Include="Entities\Status.cs" />
+    <Compile Include="Entities\Street.cs" />
+    <Compile Include="Entities\Student.cs" />
+    <Compile Include="Entities\Study.cs" />
+    <Compile Include="Entities\Template.cs" />
+    <Compile Include="Entities\TemplateGroup.cs" />
+    <Compile Include="Entities\TemplateRate.cs" />
+    <Compile Include="Entities\Topic.cs" />
+    <Compile Include="Entities\TypeOfTransaction.cs" />
+    <Compile Include="Entities\TypePayment.cs" />
+    <Compile Include="Entities\Worker.cs" />
+    <Compile Include="Entities\Year.cs" />
+    <Compile Include="GeneratePayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneratePayForm.Designer.cs">
+      <DependentUpon>GeneratePayForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GroupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GroupForm.Designer.cs">
+      <DependentUpon>GroupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InputForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InputForm2.Designer.cs">
+      <DependentUpon>InputForm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InputForm.Designer.cs">
+      <DependentUpon>InputForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LessonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LessonForm.Designer.cs">
+      <DependentUpon>LessonForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinancesGroupsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinancesGroupsForm.Designer.cs">
+      <DependentUpon>FinancesGroupsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListGroupsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListGroupsForm.Designer.cs">
+      <DependentUpon>ListGroupsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListLessonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListLessonForm.Designer.cs">
+      <DependentUpon>ListLessonForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListReturnPaysForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListReturnPaysForm.Designer.cs">
+      <DependentUpon>ListReturnPaysForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListPaymentsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListPaymentsForm.Designer.cs">
+      <DependentUpon>ListPaymentsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinancesStudentsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinancesStudentsForm.Designer.cs">
+      <DependentUpon>FinancesStudentsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PayForm.Designer.cs">
+      <DependentUpon>PayForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentsPrintForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentsPrintForm.Designer.cs">
+      <DependentUpon>PaymentsPrintForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlanForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlanForm.Designer.cs">
+      <DependentUpon>PlanForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintContractForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintContractForm.Designer.cs">
+      <DependentUpon>PrintContractForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintGroupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintGroupForm.Designer.cs">
+      <DependentUpon>PrintGroupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ListStudentsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListStudentsForm.Designer.cs">
+      <DependentUpon>ListStudentsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveStudentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RemoveStudentForm.Designer.cs">
+      <DependentUpon>RemoveStudentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RetentionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetentionForm.Designer.cs">
+      <DependentUpon>RetentionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SectionForm.Designer.cs">
+      <DependentUpon>SectionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingForm.Designer.cs">
+      <DependentUpon>SettingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentForm.Designer.cs">
+      <DependentUpon>StudentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WagesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WagesForm.Designer.cs">
+      <DependentUpon>WagesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WhatNewsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WhatNewsForm.Designer.cs">
+      <DependentUpon>WhatNewsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkerForm.Designer.cs">
+      <DependentUpon>WorkerForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AboutForm.resx">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddingStudentToGroupForm.resx">
+      <DependentUpon>AddingStudentToGroupForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ArchiveForm.resx">
+      <DependentUpon>ArchiveForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AuthForm.resx">
+      <DependentUpon>AuthForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DiscountForm.resx">
+      <DependentUpon>DiscountForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneratePayForm.resx">
+      <DependentUpon>GeneratePayForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GroupForm.resx">
+      <DependentUpon>GroupForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InputForm2.resx">
+      <DependentUpon>InputForm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InputForm.resx">
+      <DependentUpon>InputForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LessonForm.resx">
+      <DependentUpon>LessonForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinancesGroupsForm.resx">
+      <DependentUpon>FinancesGroupsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListGroupsForm.resx">
+      <DependentUpon>ListGroupsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListLessonForm.resx">
+      <DependentUpon>ListLessonForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListReturnPaysForm.resx">
+      <DependentUpon>ListReturnPaysForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListPaymentsForm.resx">
+      <DependentUpon>ListPaymentsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinancesStudentsForm.resx">
+      <DependentUpon>FinancesStudentsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayForm.resx">
+      <DependentUpon>PayForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentsPrintForm.resx">
+      <DependentUpon>PaymentsPrintForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlanForm.resx">
+      <DependentUpon>PlanForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintContractForm.resx">
+      <DependentUpon>PrintContractForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintGroupForm.resx">
+      <DependentUpon>PrintGroupForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListStudentsForm.resx">
+      <DependentUpon>ListStudentsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RemoveStudentForm.resx">
+      <DependentUpon>RemoveStudentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetentionForm.resx">
+      <DependentUpon>RetentionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionForm.resx">
+      <DependentUpon>SectionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingForm.resx">
+      <DependentUpon>SettingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentForm.resx">
+      <DependentUpon>StudentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WagesForm.resx">
+      <DependentUpon>WagesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WhatNewsForm.resx">
+      <DependentUpon>WhatNewsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkerForm.resx">
+      <DependentUpon>WorkerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Istra.Entities.Housing.datasource" />
+    <None Include="Properties\DataSources\Istra.Entities.Student.datasource" />
+    <None Include="Properties\DataSources\Istra.Entities.Worker.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="version.rtf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Шаблоны\Договор-ИП-пустой-шаблон.docx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Шаблоны\Договор-ИП-род-шаблон.docx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Шаблоны\Договор-лагерь-пустой-шаблон.docx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Шаблоны\Договор-лагерь-шаблон.docx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Шаблоны\Договор-уч-год-пустой-шаблон.docx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Шаблоны\Договор-уч-год-род-шаблон.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Шаблоны\Квитанция-шаблон.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Шаблоны\Расчетный-лист-шаблон.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Шаблоны\Согласие-шаблон.docx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_male_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_male_remove.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sum.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list_edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\word16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\word30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\userFile25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\openFile25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\word25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="logo.ico" />
+    <Content Include="Resources\add.png" />
+    <None Include="Resources\disk_save.png" />
+    <None Include="Resources\calc.png" />
+    <Content Include="Resources\edit %281%29.png" />
+    <Content Include="Resources\Excel.png" />
+    <None Include="Resources\Excel1.png" />
+    <None Include="Resources\logo.png" />
+    <None Include="Resources\icons8-synchronize-32.png" />
+    <Content Include="Resources\plus.png" />
+    <Content Include="Resources\save.png" />
+    <Content Include="Resources\Symbol_-_Remove.png" />
+    <Content Include="Resources\trashcan-delete2.png" />
+    <Content Include="Resources\xls.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Договора\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
